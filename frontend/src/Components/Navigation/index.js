@@ -14,20 +14,22 @@ function Navigation({ isLoaded }){
     );
   } else {
     sessionLinks = (
-      <>
-        <NavLink to="/login">Log In</NavLink>
-        <NavLink to="/signup">Sign Up</NavLink>
-      </>
+      <span className="nav__session">
+        <NavLink className='nav__login' to="/login">Log In</NavLink>
+        <NavLink className='nav__signup' to="/signup">Sign Up</NavLink>
+      </span>
     );
   }
 
   return (
-    <ul>
-      <li>
-        <NavLink exact to="/">Home</NavLink>
-        {isLoaded && sessionLinks}
-      </li>
-    </ul>
+    <nav className ='nav__main'>
+        <div className= 'nav__home'>
+          <NavLink className ='nav__writeitdown' exact to='/'><img src='/assets/roughdraftWriteItDown.png' /></NavLink>
+        </div>
+          {isLoaded && sessionLinks}
+
+    </nav>
+
   );
 }
 

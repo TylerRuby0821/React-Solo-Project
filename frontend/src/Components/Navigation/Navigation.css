@@ -1,0 +1,77 @@
+a.visited {
+    color: none;
+}
+
+.nav__main{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-sizing: border-box;
+    display: flex;
+
+
+}
+
+.nav__home {
+    display: flex;
+}
+.nav__writeitdown{
+    width: 97%;
+    /* text-align: center;
+    display: inline; */
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 455px;
+
+}
+
+.nav__session{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.nav__login{
+    padding: 6px 15px;
+    color: black;
+    /* background-color: #05386B; */
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    /* margin: auto; */
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-align: center;
+    height: 40px;
+    width: 150px;
+}
+
+.nav__signup{
+    padding: 6px 15px;
+    color: black;
+    /* background-color: #05386B; */
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-align: center;
+    height: 40px;
+    width: 150px;
+}
