@@ -1,0 +1,9 @@
+.signup__form{
+    display: block;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 42%;
+    margin-right: 38%;
+}

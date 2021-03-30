@@ -7,7 +7,13 @@ function HomePage() {
     return (
 		<div className= 'body__main'>
             <h1>Keep better notes</h1>
-            <h4>WriteItDown, so you dont forget.</h4>
+            <h5>WriteItDown, so you dont forget.</h5>
+            <p>
+                <NavLink to='/signup'> Sign Up</NavLink>
+            </p>
+            <p>
+                <NavLink to='/login'>Already have an account? Log in!</NavLink>
+            </p>
 		</div>
     )
 }
