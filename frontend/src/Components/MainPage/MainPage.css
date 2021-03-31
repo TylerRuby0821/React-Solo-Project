@@ -9,18 +9,3 @@
 
 
 }
-
-.body__header{
-    display: block;
-    text-align: center;
-    width: 100%;
-}
-
-.body__header--main{
-    font-size: 60px;
-    font-weight: 700;
-}
-
-.body__header--second{
-
-}

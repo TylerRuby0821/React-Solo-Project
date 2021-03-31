@@ -12,7 +12,7 @@ function LoginFormPage() {
   const [errors, setErrors] = useState([]);
 
   if (sessionUser) return (
-    <Redirect to="/" />
+    <Redirect to="/main" />
   );
 
   const handleSubmit = (e) => {
@@ -25,14 +25,25 @@ function LoginFormPage() {
       });
   }
 
+  const handleDemo = (e) => {
+    e.preventDefault();
+    setErrors([]);
+    return dispatch(sessionActions.login({ credential:"demo@user.io", password:"password" }))
+      .catch(async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      });
+  }
+
   return (
     <form className='login__form' onSubmit={handleSubmit}>
       <ul>
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
       </ul>
       <label>
-        Username or Email
+        Email:
         <input
+          className = 'login__email'
           type="text"
           value={credential}
           onChange={(e) => setCredential(e.target.value)}
@@ -40,8 +51,9 @@ function LoginFormPage() {
         />
       </label>
       <label>
-        Password
+        Password:
         <input
+          className = 'login__password'
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -49,6 +61,7 @@ function LoginFormPage() {
         />
       </label>
       <button type="submit">Log In</button>
+      <button className= "submit" onClick={handleDemo}>Log In as Demo</button>
     </form>
   );
 }

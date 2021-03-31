@@ -6,8 +6,10 @@ import './HomePage.css'
 function HomePage() {
     return (
 		<div className= 'body__main'>
-            <h1>Keep better notes</h1>
-            <h5>WriteItDown, so you dont forget.</h5>
+            <div className ='body__header'>
+                <h1 className='body__header--main'>Keep better notes</h1>
+                <h5 className='body__header--second'>WriteItDown, so you dont forget.</h5>
+            </div>
             <p>
                 <NavLink to='/signup'> Sign Up</NavLink>
             </p>

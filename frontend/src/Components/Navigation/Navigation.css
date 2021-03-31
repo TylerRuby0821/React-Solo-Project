@@ -18,22 +18,26 @@ a.visited {
     display: flex;
 }
 .nav__writeitdown{
-    width: 97%;
+    position: absolute;
     /* text-align: center;
     display: inline; */
     text-decoration: none;
     font-size: 25px;
     margin-top: 10px;
-    margin-left: 455px;
+    left: 12em;
 
 }
 
 .nav__session{
-    width: 60%;
+    /* width: 60%; */
+    position: absolute;
+    right: 25px;
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     text-decoration: none;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    margin-right: 0;
+    float: right;
 }
 
 .nav__login{
@@ -74,4 +78,10 @@ a.visited {
     text-align: center;
     height: 40px;
     width: 150px;
+}
+
+.profile__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }

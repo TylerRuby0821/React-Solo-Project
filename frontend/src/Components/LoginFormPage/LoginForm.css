@@ -1,9 +1,19 @@
 .login__form{
-    display: block;
+    display: flex;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
     margin-left: 42%;
     margin-right: 38%;
+}
+
+.login__email{
+ display: block;
+ margin-bottom: 10px;
+}
+
+.login__password{
+    display: block;
+    /* margin-top: 10px; */
 }
