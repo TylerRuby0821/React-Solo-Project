@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Note.associate = function(models) {
     Note.belongsTo(models.Notebook, { foreignKey: 'notebookId' })
+    Note.belongsToMany(models.Tag, {through:"NoteTags" ,foreignKey: "tagId"})
   };
   return Note;
 };
