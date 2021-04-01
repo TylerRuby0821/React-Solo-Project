@@ -24,20 +24,20 @@ a.visited {
     text-decoration: none;
     font-size: 25px;
     margin-top: 10px;
-    left: 12em;
+    left: 0;
 
 }
 
 .nav__session{
     /* width: 60%; */
-    position: absolute;
-    right: 25px;
+    /* position: absolute; */
+    /* right: 25px; */
     display: flex;
     /* justify-content: flex-end; */
     text-decoration: none;
     /* margin-top: 10px; */
-    margin-right: 0;
-    float: right;
+    /* margin-right: 0; */
+    /* float: right; */
 }
 
 .nav__login{

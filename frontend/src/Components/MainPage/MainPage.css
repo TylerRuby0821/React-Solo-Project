@@ -1,11 +1,123 @@
-.body__main{
-    display: block;
-    box-sizing: border-box;
+.sidebar{
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    /* display: flex; */
     justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    margin-left: 42%;
-    margin-right: 38%;
 
+}
 
+.sidebar__user{
+
+}
+
+.profile__button {
+    display: inline-block;
+    background-color: #333333;
+    border: none;
+    cursor: pointer;
+    height: 25px;
+    width: 240px;
+    margin-top: 10px;
+    color: #e6e6e6;
+
+}
+
+.fas {
+    font-size: 20px;
+    color: #e6e6e6;
+    border-radius: 3px;
+}
+.profile__name{
+    display: inline-block;
+    color: white;
+}
+
+i{
+    margin-right: 10px;
+}
+
+.profile__menu{
+    /* display: flex; */
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: #333333;
+    width: 230px;
+
+}
+
+li {
+    list-style-type: none;
+    color: #e6e6e6;
+}
+
+.sidenav:hover{
+    color: #525252;
+}
+
+.dropdown__logout{
+    background: transparent;
+    border: none;
+    color: #e6e6e6;
+    cursor: pointer;
+}
+
+.nav__section{
+    height: 3px;
+    width: auto;
+    font-size: 18px;
+    color: #525252;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.nav__chunk{
+    margin-left: 0;
+}
+
+.seperator{
+    margin-top: 2px;
+    border-top: 1px solid #4d4d4d;
+    margin-bottom: 2px;
+    padding-inline-start: 0
+}
+
+.nav__search{
+    background-color: #404040;
+    height: 32px;
+    width: 192px;
+    border-radius: 10px;
+    margin-top: 15px;
+
+}
+
+.nav__search{
+    margin-left: 25px;
+}
+
+.new__note{
+    background-color: rgb(5, 69, 129);
+    color: #e6e6e6;
+    border: none;
+    height: 36px;
+    width: 198px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.nav__menu--item{
+    margin-bottom: 10px;
+}
+
+.extra__space{
+    margin-bottom: 20px;
 }
