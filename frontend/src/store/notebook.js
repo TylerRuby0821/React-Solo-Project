@@ -19,7 +19,7 @@ const getNotebooks = (notebooks) => {
 
 export const createNotebook = (notebook) => async (dispatch) => {
 
-    const response = await csrfFetch(`api/notebooks/`, {
+    const response = await csrfFetch(`/api/notebooks`, {
         method: 'POST',
         body: JSON.stringify(notebook)
     })

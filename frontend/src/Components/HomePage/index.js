@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './HomePage.css'
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import Navigation from '../Navigation'
 
 

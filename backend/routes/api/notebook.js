@@ -11,8 +11,8 @@ router.post(
     '/',
     restoreUser,
     asyncHandler(async (req, res) => {
-        const {name} = req.body;
-        const userId = req.user.id
+        const {userId, name} = req.body;
+        console.log(name)
         const notebook = await Notebook.create({ userId, name})
 
         return res.json({
@@ -25,7 +25,7 @@ router.get(
     '/',
     asyncHandler(async(req, res) => {
         const notebooks = await Notebook.findAll({
-            order: [['createdAt', 'DESC']],
+            order: [['createdAt', 'ASC']],
             limit: 20,
         })
         res.json({notebooks})

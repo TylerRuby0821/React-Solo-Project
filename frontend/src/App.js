@@ -6,6 +6,8 @@ import SignupFormPage from "./Components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import HomePage from './Components/HomePage'
 import MainPage from './Components/MainPage'
+import NoteBook from './Components/Notebook'
+import CreateNotebook from "./Components/CreateNotebook";
 
 function App() {
   const dispatch = useDispatch();
@@ -16,7 +18,7 @@ function App() {
   }, [dispatch]);
 
   return isLoaded && (
-      
+
     <>
         <Switch>
           <Route exact path='/'>
@@ -30,6 +32,12 @@ function App() {
           </Route>
           <Route path='/main'>
             <MainPage />
+          </Route>
+          <Route exact path='/notebook/create'>
+            <CreateNotebook />
+          </Route>
+          <Route path='/notebooks'>
+            <NoteBook />
           </Route>
         </Switch>
 
