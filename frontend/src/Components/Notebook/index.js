@@ -22,7 +22,7 @@ function Notebook() {
             <button className='create__notebook--button'> <NavLink to='/notebook/create'>Create Notebook</NavLink></button>
             <p>---------------------------------------------------</p>
               {notebooks.map(notebook => {
-               return <div className='books__container'>
+               return <div key={notebook.id} className='books__container'>
                   <p key={notebook.id}>{notebook.id}: {notebook.name}</p>
 
 
