@@ -1,9 +1,39 @@
-.signup__form{
-    display: block;
+.signup__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
+    border: 1px;
+    box-shadow: 1px gray;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup__form{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
     margin-left: 42%;
     margin-right: 38%;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 10px 5px  rgb(143, 142, 142);
+    padding: 5px;
+    height: 500px;
+    width: 500px;
 }
+
+.signup__email{
+ display: flex;
+ margin-bottom: 10px;
+}
+
+.signup__password{
+    display: block;
+    /* margin-top: 10px; */
+}
+
+
