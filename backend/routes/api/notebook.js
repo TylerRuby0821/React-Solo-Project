@@ -2,7 +2,7 @@ const express = require('express')
 const asyncHandler = require('express-async-handler');
 
 const { Notebook, sequelize } = require('../../db/models')
-const { restoreUser} = require('../../utils/auth')
+const { restoreUser, getCurrentUserId} = require('../../utils/auth')
 
 const router = express.Router();
 
@@ -24,7 +24,11 @@ router.post(
 router.get(
     '/',
     asyncHandler(async(req, res) => {
+        const id = await getCurrentUserId(req)
+        console.log(id)
         const notebooks = await Notebook.findAll({
+            where: {
+                userId: id},
             order: [['createdAt', 'ASC']],
             limit: 20,
         })

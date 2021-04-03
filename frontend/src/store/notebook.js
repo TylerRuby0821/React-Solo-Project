@@ -18,7 +18,7 @@ const getNotebooks = (notebooks) => {
 }
 
 export const createNotebook = (notebook) => async (dispatch) => {
-
+    console.log('Thunk Notebook: ', notebook)
     const response = await csrfFetch(`/api/notebooks`, {
         method: 'POST',
         body: JSON.stringify(notebook)

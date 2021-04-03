@@ -1,4 +1,5 @@
 import { csrfFetch } from './csrf';
+import { createNotebook } from './notebook';
 
 const SET_USER = 'session/setUser';
 const REMOVE_USER = 'session/removeUser';
@@ -49,6 +50,7 @@ export const restoreUser = () => async dispatch => {
     });
     const data = await response.json();
     dispatch(setUser(data.user));
+    dispatch(createNotebook({userId: data.user.id, name: 'My First Notebook'}))
     return response;
   };
 
@@ -59,7 +61,7 @@ export const restoreUser = () => async dispatch => {
     dispatch(removeUser());
     return response;
   };
-  
+
 const initialState = { user: null };
 
 const sessionReducer = (state = initialState, action) => {
