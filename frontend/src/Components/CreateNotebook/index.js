@@ -17,7 +17,6 @@ function CreateNotebook () {
             userId,
             name
         }
-        console.log(notebook)
         dispatch(createNotebook(notebook))
         history.push('/notebooks')
       };

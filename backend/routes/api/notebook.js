@@ -12,7 +12,6 @@ router.post(
     restoreUser,
     asyncHandler(async (req, res) => {
         const {userId, name} = req.body;
-        console.log(name)
         const notebook = await Notebook.create({ userId, name})
 
         return res.json({
@@ -25,7 +24,6 @@ router.get(
     '/',
     asyncHandler(async(req, res) => {
         const id = await getCurrentUserId(req)
-        console.log(id)
         const notebooks = await Notebook.findAll({
             where: {
                 userId: id},
